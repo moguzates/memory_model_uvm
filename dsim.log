@@ -1,5 +1,5 @@
 =N:[UVMSource] Using sources from 'C:\Users\Mustafa\Altair\DSim\2025\uvm\1.2'
-=N:[UsageMeter (2025-03-18 10:41:41 Türkiye Standart Saati)] usage server initial connection
+=N:[UsageMeter (2025-03-19 14:57:28 Türkiye Standart Saati)] usage server initial connection
 =N:[License] 
 Licensed for Altair DSim Cloud.
 =N:[License] New lease granted.
@@ -82,7 +82,7 @@ Building models...
 PLI/VPI access: (none) 
 Simulation time precision is 1ps.
 Linking image.so...
-=N:[RootSeed] Using random seed ea8c300d7ada13d7900b337293270fe1c41dc81c0baf189d27d223e12211cb46.
+=N:[RootSeed] Using random seed d5b139513bbd6440335ea7c9307baf2c8db10395d6ebeef8cb95326c10cfca27.
 Using default typical min/typ/max.
 =S:Begin run-time elaboration and static initialization...
 UVM_INFO C:\Users\Mustafa\Altair\DSim\2025\uvm\1.2\src\base\uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -108,21 +108,57 @@ UVM-1.2
       (Specify +UVM_NO_RELNOTES to turn off this notice)
 
 =N:Starting event scheduler...
-UVM_FATAL @ 0: reporter [NOCOMP] No components instantiated. You must either instantiate at least one component before calling run_test or use run_test to do so. To run a test using run_test, use +UVM_TESTNAME or supply the test name in the argument to run_test(). Exiting simulation.
-UVM_INFO C:\Users\Mustafa\Altair\DSim\2025\uvm\1.2\src\base\uvm_report_server.svh(847) @ 0: reporter [UVM/REPORT/SERVER] 
+UVM_INFO @ 0: reporter [RNTST] Running test mem_wr_rd_test...
+----------------------------------------------------------------
+Name                         Type                    Size  Value
+----------------------------------------------------------------
+uvm_test_top                 mem_wr_rd_test          -     @339 
+  env                        mem_model_env           -     @352 
+    mem_agnt                 mem_agent               -     @367 
+      driver                 mem_driver              -     @409 
+        rsp_port             uvm_analysis_port       -     @428 
+        seq_item_port        uvm_seq_item_pull_port  -     @418 
+      monitor                mem_monitor             -     @386 
+        item_collected_port  uvm_analysis_port       -     @399 
+      sequencer              mem_sequencer           -     @438 
+        rsp_export           uvm_analysis_export     -     @447 
+        seq_item_export      uvm_seq_item_pull_imp   -     @565 
+        arbitration_queue    array                   0     -    
+        lock_queue           array                   0     -    
+        num_last_reqs        integral                32    'd1  
+        num_last_rsps        integral                32    'd1  
+    mem_scb                  mem_scoreboard          -     @376 
+      item_collected_export  uvm_analysis_imp        -     @582 
+----------------------------------------------------------------
+UVM_INFO .\tb\mem_scoreboard.sv(57) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] ------ :: WRITE DATA       :: ------
+UVM_INFO .\tb\mem_scoreboard.sv(58) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] Addr: 2
+UVM_INFO .\tb\mem_scoreboard.sv(59) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] Data: b1
+UVM_INFO .\tb\mem_scoreboard.sv(60) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] ------------------------------------
+UVM_INFO .\tb\mem_scoreboard.sv(64) @ 55000: uvm_test_top.env.mem_scb [mem_scoreboard] ------ :: READ DATA Match :: ------
+UVM_INFO .\tb\mem_scoreboard.sv(65) @ 55000: uvm_test_top.env.mem_scb [mem_scoreboard] Addr: 0
+UVM_INFO .\tb\mem_scoreboard.sv(66) @ 55000: uvm_test_top.env.mem_scb [mem_scoreboard] Expected Data: ff Actual Data: ff
+UVM_INFO .\tb\mem_scoreboard.sv(67) @ 55000: uvm_test_top.env.mem_scb [mem_scoreboard] ------------------------------------
+UVM_INFO C:\Users\Mustafa\Altair\DSim\2025\uvm\1.2\src\base\uvm_objection.svh(1270) @ 95000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO .\tb\mem_base_test.sv(56) @ 95000: uvm_test_top [mem_wr_rd_test] ---------------------------------------
+UVM_INFO .\tb\mem_base_test.sv(57) @ 95000: uvm_test_top [mem_wr_rd_test] ----           TEST PASS           ----
+UVM_INFO .\tb\mem_base_test.sv(58) @ 95000: uvm_test_top [mem_wr_rd_test] ---------------------------------------
+UVM_INFO C:\Users\Mustafa\Altair\DSim\2025\uvm\1.2\src\base\uvm_report_server.svh(847) @ 95000: reporter [UVM/REPORT/SERVER] 
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :    1
+UVM_INFO :   14
 UVM_WARNING :    0
 UVM_ERROR :    0
-UVM_FATAL :    1
+UVM_FATAL :    0
 ** Report counts by id
-[NOCOMP]     1
+[RNTST]     1
+[TEST_DONE]     1
 [UVM/RELNOTES]     1
+[mem_scoreboard]     8
+[mem_wr_rd_test]     3
 
-=T:Simulation terminated by $finish at time 0 (C:\Users\Mustafa\Altair\DSim\2025\uvm\1.2\src\base\uvm_root.svh:135);
+=T:Simulation terminated by $finish at time 95000 (C:\Users\Mustafa\Altair\DSim\2025\uvm\1.2\src\base\uvm_root.svh:517);
 Run directory: C:\Users\Mustafa\Desktop\Yongatek\verification\memory_model
   System timescale is 1ps / 1ps
   Altair DSim version: 2025.0.0000 (b:S #c:32 h:e6a01125e5 os:msys2_)
-  Random seed: ea8c300d7ada13d7900b337293270fe1c41dc81c0baf189d27d223e12211cb46
+  Random seed: d5b139513bbd6440335ea7c9307baf2c8db10395d6ebeef8cb95326c10cfca27

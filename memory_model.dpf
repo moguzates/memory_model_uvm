@@ -6,7 +6,9 @@ work_dir: .
 design_root_dir: .
 simulations:
   - name: sim
-    options: '-top work.tbench_top  -L work -uvm 1.2 -sv_seed random'
+    options: >-
+      -top work.tbench_top  -L work -uvm 1.2 -sv_seed random
+      +UVM_TESTNAME=mem_wr_rd_test
 source_files:
   - language: verilog
     path: tb\testbench.sv

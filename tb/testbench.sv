@@ -50,8 +50,7 @@ module tbench_top;
    );
   
   //---------------------------------------
-  //passing the interface handle to lower heirarchy using set method 
-  //and enabling the wave dump
+  //passing the interface handle to lower heirarchy using set method //set up and invoke the test
   //---------------------------------------
   initial begin 
     uvm_config_db#(virtual mem_if)::set(uvm_root::get(),"*","vif",intf);
@@ -61,7 +60,7 @@ module tbench_top;
   //calling test
   //---------------------------------------
   initial begin 
-    run_test();
+    run_test();    //+UVM_TESTNAME="my_test1"
   end
   
 endmodule
