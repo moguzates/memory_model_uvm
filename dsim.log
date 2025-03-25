@@ -1,5 +1,5 @@
 =N:[UVMSource] Using sources from 'C:\Users\Mustafa\Altair\DSim\2025\uvm\1.2'
-=N:[UsageMeter (2025-03-19 14:57:28 Türkiye Standart Saati)] usage server initial connection
+=N:[UsageMeter (2025-03-20 11:14:01 Türkiye Standart Saati)] usage server initial connection
 =N:[License] 
 Licensed for Altair DSim Cloud.
 =N:[License] New lease granted.
@@ -82,7 +82,7 @@ Building models...
 PLI/VPI access: (none) 
 Simulation time precision is 1ps.
 Linking image.so...
-=N:[RootSeed] Using random seed d5b139513bbd6440335ea7c9307baf2c8db10395d6ebeef8cb95326c10cfca27.
+=N:[RootSeed] Using random seed 6f33dff31a6d802e72948a4dc76ac106149b81e902b5463553b10ab01d6b49c5.
 Using default typical min/typ/max.
 =S:Begin run-time elaboration and static initialization...
 UVM_INFO C:\Users\Mustafa\Altair\DSim\2025\uvm\1.2\src\base\uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -131,11 +131,11 @@ uvm_test_top                 mem_wr_rd_test          -     @339
       item_collected_export  uvm_analysis_imp        -     @582 
 ----------------------------------------------------------------
 UVM_INFO .\tb\mem_scoreboard.sv(57) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] ------ :: WRITE DATA       :: ------
-UVM_INFO .\tb\mem_scoreboard.sv(58) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] Addr: 2
-UVM_INFO .\tb\mem_scoreboard.sv(59) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] Data: b1
+UVM_INFO .\tb\mem_scoreboard.sv(58) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] Addr: 0
+UVM_INFO .\tb\mem_scoreboard.sv(59) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] Data: 36
 UVM_INFO .\tb\mem_scoreboard.sv(60) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] ------------------------------------
 UVM_INFO .\tb\mem_scoreboard.sv(64) @ 55000: uvm_test_top.env.mem_scb [mem_scoreboard] ------ :: READ DATA Match :: ------
-UVM_INFO .\tb\mem_scoreboard.sv(65) @ 55000: uvm_test_top.env.mem_scb [mem_scoreboard] Addr: 0
+UVM_INFO .\tb\mem_scoreboard.sv(65) @ 55000: uvm_test_top.env.mem_scb [mem_scoreboard] Addr: 3
 UVM_INFO .\tb\mem_scoreboard.sv(66) @ 55000: uvm_test_top.env.mem_scb [mem_scoreboard] Expected Data: ff Actual Data: ff
 UVM_INFO .\tb\mem_scoreboard.sv(67) @ 55000: uvm_test_top.env.mem_scb [mem_scoreboard] ------------------------------------
 UVM_INFO C:\Users\Mustafa\Altair\DSim\2025\uvm\1.2\src\base\uvm_objection.svh(1270) @ 95000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
@@ -161,4 +161,4 @@ UVM_FATAL :    0
 Run directory: C:\Users\Mustafa\Desktop\Yongatek\verification\memory_model
   System timescale is 1ps / 1ps
   Altair DSim version: 2025.0.0000 (b:S #c:32 h:e6a01125e5 os:msys2_)
-  Random seed: d5b139513bbd6440335ea7c9307baf2c8db10395d6ebeef8cb95326c10cfca27
+  Random seed: 6f33dff31a6d802e72948a4dc76ac106149b81e902b5463553b10ab01d6b49c5
