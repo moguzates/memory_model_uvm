@@ -50,7 +50,7 @@ class mem_scoreboard extends uvm_scoreboard;
     
     forever begin
       wait(pkt_qu.size() > 0);
-      mem_pkt = pkt_qu.pop_front();
+      mem_pkt = pkt_qu.pop_front(); 
       
       if(mem_pkt.wr_en) begin
         sc_mem[mem_pkt.addr] = mem_pkt.wdata;
